@@ -1,0 +1,227 @@
+<resources>
+    <string name="app_name">수능카운터</string>
+
+    <string name="channel_normal">일반</string>
+    <string name="channel_notificationservice">상단바 알림이</string>
+
+    <string name="setting_hello1">안녕하세요 :)</string>
+    <string name="setting_hello2">유저 설정을 시작합니다</string>
+
+    <string name="setting_back">이전</string>
+    <string name="setting_advance">다음</string>
+    <string name="setting_end">마침</string>
+
+    <string name="setting_mode">설정 모드를 선택하세요</string>
+    <string name="setting_mode_suneung">대학수학능력시험 [한국]</string>
+    <string name="setting_mode_sat">SAT [미국]</string>
+    <string name="setting_mode_normal">일반 D-Day 모드</string>
+    <string name="setting_mode_name_suneung">수능 모드</string>
+    <string name="setting_mode_name_sat">SAT 모드</string>
+    <string name="setting_mode_name_normal">일반 모드</string>
+    <string name="setting_date">D-Day를 설정하세요</string>
+    <string name="setting_date_click">여기를 터치하세요</string>
+    <string name="setting_date_preset">빠른 설정</string>
+    <string name="setting_date_preset_suneung_2020">2020 대학수학능력시험</string>
+    <string name="setting_date_preset_suneung_2021">2021 대학수학능력시험</string>
+    <string name="setting_date_preset_suneung_2022">2022 대학수학능력시험</string>
+    <string name="setting_date_preset_suneung_2023">2023 대학수학능력시험</string>
+    <string name="setting_goal">목표를 설정하세요</string>
+    <string name="setting_goal_hint">여기에 목표를 입력해주세요</string>
+    <string name="setting_goal_hint_college">목표 대학을 입력해주세요</string>
+    <string name="setting_goal_image_choose">내 이미지 불러오기</string>
+    <string name="setting_goal_image_open">갤러리 열기</string>
+    <string name="setting_goal_image_cancel">닫기</string>
+    <string name="setting_goal_optional_hint">각오 및 다짐 (선택사항)</string>
+    <string name="setting_finish">설정이 완료되었습니다 :)</string>
+    <string name="setting_finish_advance">눌러서 시작</string>
+    <string name="setting_start">터치하여 권한을 허용해 주세요</string>
+    <string name="setting_start_permission_essential">필수</string>
+    <string name="setting_start_permission_wes_title">기기 파일 엑세스</string>
+    <string name="setting_start_permission_wes_message">설정을 저장합니다\n갤러리에서 사진을 불러옵니다</string>
+    <string name="setting_start_permission_mol_title">다른 앱 위에 그리기</string>
+    <string name="setting_start_permission_mol_message">플로팅 알림 시 필요합니다\n나중에 허용할 수 있습니다</string>
+    <string name="setting_start_permission_mol_toast">이 기능을 허용해주세요!</string>
+    <string name="setting_start_permission_block">필수 권한을 허용해 주세요!</string>
+    <string name="setting_start_permission_block_nonessential">앗&#8230;?</string>
+    <string name="setting_start_pass">\'다음\' 버튼을 누르세요 :)</string>
+
+    <string name="main_header_date">D-DAY&#160;</string>
+    <string name="main_tab_title_0">설정</string>
+    <string name="main_tab_title_1">상단바</string>
+    <string name="main_tab_title_2">플로팅</string>
+    <string name="main_tab_title_3">잠금화면</string>
+
+    <string name="main_general_set">다시 설정하려면 누르세요 :)</string>
+    <string name="main_general_mode">모드</string>
+    <string name="main_general_date">디데이</string>
+    <string name="main_general_dayleft">남은 일수</string>
+    <string name="main_general_dayleft_prefix">D&#160;-&#160;</string>
+    <string name="main_general_goal">목표</string>
+    <string name="main_general_slogan">대학 슬로건</string>
+    <string name="main_general_color">대학 대표색</string>
+    <string name="main_general_optional">다짐</string>
+    <string name="main_general_image">로고</string>
+    <string name="main_general_section_misc">기타 설정</string>
+    <string name="main_general_widget_color_on">위젯 텍스트는 흰색입니다!</string>
+    <string name="main_general_widget_color_off">위젯 텍스트는 검정색입니다</string>>
+    <string name="main_general_footer_dev">LimeCake</string>
+    <string name="main_general_footer_license">오픈소스 라이선스</string>
+
+    <string name="main_notification_master_on">상단바 알림이 켜졌습니다!</string>
+    <string name="main_notification_master_off">상단바 알림이 꺼졌습니다.</string>
+    <string name="main_notification_section_design">디자인</string>
+    <string name="main_notification_design_classic">클래식</string>
+    <string name="main_notification_design_new">뉴</string>
+    <string name="main_notification_design_simple">심플</string>
+    <string name="main_notification_design_color_on">대학 대표색을 사용합니다!</string>
+    <string name="main_notification_design_color_off">대학 대표색 사용 안함</string>
+    <string name="main_notification_section_setting">상세 설정</string>
+    <string name="main_notification_boot_on">부팅 시 자동으로 시작합니다!</string>
+    <string name="main_notification_boot_off">부팅 시 시작하지 않습니다</string>
+    <string name="main_notification_word_on">명언을 알림에 추가합니다!</string>
+    <string name="main_notification_word_off">명언을 사용하지 않습니다</string>
+
+    <string name="main_floating_master_on">플로팅 알림이 켜졌습니다!</string>
+    <string name="main_floating_master_off">플로팅 알림이 꺼졌습니다.</string>
+    <string name="main_floating_master_design">디자인을 하나 이상 선택하세요!</string>
+    <string name="main_floating_section_mode">플로팅 모드</string>
+    <string name="main_floating_mode_move">이동 모드</string>
+    <string name="main_floating_mode_fixed">고정 모드</string>
+    <string name="main_floating_mode_move_description">이동 모드에서는, 터치하여 팝업의 위치를 이동시킬 수 있습니다.</string>
+    <string name="main_floating_mode_fixed_description">고정 모드에서는, 터치에 반응하지 않기에, 일상에 적합합니다.</string>
+    <string name="main_floating_section_design">디자인</string>
+    <string name="main_floating_design_box">박스</string>
+    <string name="main_floating_design_image">이미지</string>
+    <string name="main_floating_design_text">텍스트</string>
+    <string name="main_floating_design_minimal">미니멀</string>
+    <string name="main_floating_design_color_on">대학 대표색을 사용합니다!</string>
+    <string name="main_floating_design_color_off">대학 대표색 사용 안함</string>
+    <string name="main_floating_section_size">크기</string>
+    <string name="main_floating_size">플로팅 알림 크기를 조절하세요</string>
+    <string name="main_floating_section_setting">상세 설정</string>
+    <string name="main_floating_boot_on">부팅 시 자동으로 시작합니다!</string>
+    <string name="main_floating_boot_off">부팅 시 시작하지 않습니다</string>
+
+    <string name="main_lockscreen_foreground">안드로이드 8.0(OREO) 이상부터,\n상단바 알림 작동이 필수입니다!</string>
+    <string name="main_lockscreen_master_on">잠금화면이 활성화되었습니다!</string>
+    <string name="main_lockscreen_master_off">잠금화면이 비활성화되었습니다.</string>
+    <string name="main_lockscreen_master_description">잠금화면을 저희 것으로 대체해보려 했습니다만, 혹시 기존 잠금화면이 남아있다면, 기기 \'설정\'에서 잠금화면을 없음으로 설정해주세요 :)</string>
+    <string name="main_lockscreen_section_mode">잠금해제 방법</string>
+    <string name="main_lockscreen_mode_swipe">스와이프</string>
+    <string name="main_lockscreen_mode_pin">PIN</string>
+    <string name="main_lockscreen_mode_pattern">패턴</string>
+    <string name="main_lockscreen_section_fingerprint">지문인식</string>
+    <string name="main_lockscreen_fingerprint_on">지문인식으로도 해제 가능합니다!</string>
+    <string name="main_lockscreen_fingerprint_off">지문인식 사용 안함</string>
+    <string name="main_lockscreen_fingerprint_description">PIN 이나 패턴 모드를 사용해야 지문인식또한 동작합니다</string>
+    <string name="main_lockscreen_fingerprint_notenroll">지문을 기기에 등록하고 다시 와주세요!</string>
+    <string name="main_lockscreen_section_design">디자인</string>
+    <string name="main_lockscreen_design_full">종합적</string>
+    <string name="main_lockscreen_design_light">가벼움</string>
+    <string name="main_lockscreen_design_minimal">미니멀</string>
+    <string name="main_lockscreen_design_color_on">대학 대표색을 사용합니다!</string>
+    <string name="main_lockscreen_design_color_off">대학 대표색 사용 안함</string>
+    <string name="main_lockscreen_design_wallpaper_on">어두운 배경을 사용중입니다</string>
+    <string name="main_lockscreen_design_wallpaper_off">밝은 배경을 사용중입니다</string>
+    <string name="main_lockscreen_section_setting">상세 설정</string>
+    <string name="main_lockscreen_boot_on">부팅 시 자동으로 시작합니다!</string>
+    <string name="main_lockscreen_boot_off">부팅 시 시작하지 않습니다</string>
+    <string name="main_lockscreen_boot_warning">엥? 정말로요? 이렇게 되면, 부팅 이후 이 잠금화면 서비스는 \'이 앱을 직접 실행한 이후\' 부터 전원이 종료될 때까지 실행됩니다.</string>
+    <string name="main_lockscreen_set_pin_input">PIN 을 설정하세요</string>
+    <string name="main_lockscreen_set_pin_confirm">다시 한번 확인해 주세요 :)</string>
+    <string name="main_lockscreen_set_pin_wrong">일치하지 않습니다. 다시 설정하세요</string>
+    <string name="main_lockscreen_set_pattern_input">패턴을 설정하세요</string>
+    <string name="main_lockscreen_set_pattern_confirm">다시 한번 확인해 주세요 :)</string>
+    <string name="main_lockscreen_set_pattern_wrong">일치하지 않습니다. 다시 설정하세요</string>
+
+    <string name="lockscreen_status_retry_finger">지문이 일치하지 않습니다</string>
+    <string name="lockscreen_status_retry_pin">PIN 불일치</string>
+    <string name="lockscreen_status_retry_pattern">패턴 불일치</string>
+    <string name="lockscreen_status_finger">지문인식 활성화됨</string>
+    <string name="lockscreen_swipe_text">슬라이드하여 잠금해제</string>
+
+    <string name="widget_label">수능카운터 위젯</string>
+    <string name="widget_label_box">수능카운터 박스</string>
+    <string name="widget_label_image">수능카운터 이미지</string>
+    <string name="widget_label_text">수능카운터 텍스트</string>
+    <string name="widget_label_minimal">수능카운터 미니멀</string>
+
+    <string name="support_title">문의하기</string>
+    <string name="support_message">문제가 있거나, 문의사항이 있으시다면, 주저하지 마세요!!</string>
+    <string name="support_mail">이메일 보내기</string>
+    <string name="support_close">괜찮아요</string>
+
+    <string name="premium_title">감사합니다!</string>
+    <string name="premium_message">어플리케이션이 도움이 되셨나요?\n만족하셨다면 평가를 남겨주세요 :)\n\n아, 아니면 아메리카노를 사주셔도 되구요!\n후원해 주시면 광고같은건 책임지고 없애겠습니다 :)</string>
+    <string name="premium_americano">아메리카노 후원하기 (1$)</string>
+    <string name="premium_rate">평가하러 가겠습니다 :)</string>
+    <string name="premium_close">괜찮아요</string>
+
+    <string name="release_event_title">새 이벤트!</string>
+    <string name="release_event_message">SNS에 이 어플리케이션에 대해 글을 올려주세요. \'평생 광고제거\' 코드를 보내드립니다!\n[필수항목]\n 포스트 링크를 이메일로 보내주셔야 해요\n 포스트는 \'전체 공개\' 상태여야 제가 확인할 수 있어요!\n 포스트에 어플리케이션 다운 링크가 들어가있어야 해요!</string>
+    <string name="release_event_copy">마켓 어플 다운 링크 복사</string>
+    <string name="release_event_mail">이메일 보내기</string>
+    <string name="release_event_close">괜찮아요</string>
+    <string name="release_event_copy_ok">복사되었습니다</string>
+
+    <string name="service_error">수능카운터에서 새로운 윈도우 생성에 실패했습니다</string>
+
+    <string-array name="word_list">
+        <item>굳은 결심은 가장 유용한 지식이다.</item>
+        <item>10분 뒤와 10년 후를 동시에 생각하라.</item>
+        <item>성공을 확신하는 것이 성공에의 첫걸음이다.</item>
+        <item>사람은 스스로 운명을 만든다.</item>
+        <item>일을 하는데 있어서 언제 시작할까 생각하는 것은 그만큼 때를 늦추는 것이다.</item>
+        <item>자신이 있어서 하는 것이 아니라 자신이 없기 떄문에 자신감을 얻기 위해 행동하는 것이다.</item>
+        <item>실패란 보다 현명하게 다시 시작할 수 있는 기회다.</item>
+        <item>어떤 문제이든 불가능이 아니라 가능을 염두에 두고 고려하라.</item>
+        <item>고뇌에 지는 것은 수치가 아니다. 쾌락에 지는 것이야말로 수치다.</item>
+        <item>늦게 시작하는 것을 두려워 말고, 하다 중단하는 것을 두려워하라.</item>
+        <item>희망은 언제나 힘든 언덕길 너머에서 기다리고 있다.</item>
+        <item>사람에게 필요한 것은 행동이다.</item>
+        <item>인간이 뜻을 세우는데 있어서 늦은 때는 없다.</item>
+        <item>고통을 주지 않는 것은 쾌락도 주지 않는다.</item>
+        <item>실패한 사실이 중요한것이 아니다.도전하지 못한 비겁함이 더 큰 치욕이다.</item>
+        <item>말하자마자 행동하는 사람 그것이 가치있는 사람이다.</item>
+        <item>젊었을때 배움을 소홀히 하는 자는 과거를 상실하고,미래에도 죽는다.</item>
+        <item>무슨 일이고 참을수 있는 사람은 무슨일이고 실행할수 있다.</item>
+        <item>전쟁에는 준우승자를 위한 2등상이 없다.</item>
+        <item>너는 너의 이마의 땀으로 너의 빵을 얻지 않으면 안된다.</item>
+        <item>인생에서 실패한 사람 중 다수는 성공을 목전에 두고도 모른 채 포기한 이들이다.</item>
+        <item>자신이 공들이고 견뎌낸 모든 것을 기억하는 사람에게는 슬픔조차도 오랜 시간이 지나면 기쁨이 된다.</item>
+        <item>눈을 들어 하늘을 보는 사람에게는 닿을 수 없을 정도로 높은 곳이란 없다.</item>
+        <item>나무가 클수록 그 뿌리가 깊듯이 모든 위대한 성과는 장구한 준비가 필요하다.</item>
+        <item>도중에 포기하지 말라. 망설이지 말라. 최후의 성공을 거둘 때까지 밀고 나가자.</item>
+        <item>성공은 하루아침에 이루어지지 않는다</item>
+        <item>남보다 더일찍 더 부지런히 노력해야 성공을 맛볼수 있다</item>
+        <item>실패는 용서해도 포기는 용서 못한다</item>
+        <item>지금 흘린 침은 내일 흘릴 눈물이 된다.</item>
+        <item>개같이 공부해서 정승같이 놀자 </item>
+        <item>오늘 걷지 않으면, 내일 뛰어야 한다</item>
+        <item>미래에 투자하는 사람은 현실에 충실한 사람이다</item>
+        <item>공부하는 고통은 잠깐이지만, 못배운 고통은 평생이다</item>
+        <item>오늘보낸 하루는 내일 다시 돌아오지 않는다</item>
+        <item>지금 이 순간에도 적들의 책장은 넘어가고 있다</item>
+        <item>청춘은 우리의 인생에서 단 한 번밖에 오지 않는다.</item>
+        <item>최선은 절대 나를 배반하지 않는다.</item>
+        <item>수학은 실수를 용납하지 않는다.</item>
+        <item>질문에는 돈이 들지 않는다.</item>
+        <item>불가능이란 노력하지 않는 자의 변명이다.</item>
+        <item>아예 안 하는 것보다는 늦게 하는 것이 낫다.</item>
+        <item>지금 잠을 자면 꿈을 꾸지만 지금 공부하면 꿈을 이룬다.</item>
+        <item>내가 헛되이 보낸 오늘은 어제 죽은 이가 갈망하던 내일이다.</item>
+        <item>늦었다고 생각했을 때, 그때가 가장 빠를 때이다.</item>
+        <item>오늘 할 공부를 내일로 미루지 마라.</item>
+        <item>공부할 때의 고통은 잠깐이지만 못 배운 고통은 평생이다.</item>
+        <item>공부는 시간이 부족한 것이 아니라 노력이 부족한 것이다.</item>
+        <item>피할 수 없다면 즐겨라.</item>
+        <item>고통이 없으면 얻는것도 없다.</item>
+        <item>성적은 투자한 시간의 절대량에 비례한다.</item>
+        <item>가장 위대한 일은 남들이 자고 있을 때 이뤄진다.</item>
+        <item>지금 헛되이 보내는 이 시간이 시험을 코앞에 둔 시점에서 얼마나 절실하게 느껴지겠는가?</item>
+        <item>노력의 대가는 이유 없이 사라지지 않는다.</item>
+        <item>인간의 죽음은 패배했을 때가 아니라 포기했을 때에 온다.</item>
+        <item>제 갈 길을 아는 사람에게 세상은 길을 비켜준다.</item>
+        <item>연습만이 완벽을 만든다.</item>
+    </string-array>
+</resources>

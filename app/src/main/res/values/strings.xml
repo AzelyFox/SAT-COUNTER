@@ -1,0 +1,228 @@
+<resources>
+    <string name="app_name">SATCounter</string>
+
+    <string name="channel_normal">Normal</string>
+    <string name="channel_notificationservice">Notification Feature</string>
+
+    <string name="setting_hello1">Hello :)</string>
+    <string name="setting_hello2">Let\'s make your Setting</string>
+
+    <string name="setting_back">Back</string>
+    <string name="setting_advance">Next</string>
+    <string name="setting_end">Finish</string>
+
+    <string name="setting_mode">Set your App Mode</string>
+    <string name="setting_mode_suneung">College Entrance Exam [KOREA]</string>
+    <string name="setting_mode_sat">SAT [US]</string>
+    <string name="setting_mode_normal">Just D-Day</string>
+    <string name="setting_mode_name_suneung">College Entrance Exam</string>
+    <string name="setting_mode_name_sat">SAT</string>
+    <string name="setting_mode_name_normal">NORMAL</string>
+    <string name="setting_date">Set your D-Day</string>
+    <string name="setting_date_click">Touch here to Set</string>
+    <string name="setting_date_preset">Presets</string>
+    <string name="setting_date_preset_suneung_2020">2020 College Entrance Exam</string>
+    <string name="setting_date_preset_suneung_2021">2021 College Entrance Exam</string>
+    <string name="setting_date_preset_suneung_2022">2022 College Entrance Exam</string>
+    <string name="setting_date_preset_suneung_2023">2023 College Entrance Exam</string>
+    <string name="setting_goal">Set your Goal</string>
+    <string name="setting_goal_hint">Type your goal here!</string>
+    <string name="setting_goal_hint_college">Type your goal College here!</string>
+    <string name="setting_goal_image_choose">Load My Image</string>
+    <string name="setting_goal_image_open">Open Gallery</string>
+    <string name="setting_goal_image_cancel">Close</string>
+    <string name="setting_goal_optional_hint">Your resolution or determination here (optional)</string>
+    <string name="setting_finish">Custom Setting Finished :)</string>
+    <string name="setting_finish_advance">Touch to Start</string>
+    <string name="setting_start">Touch to Grant Permissions</string>
+    <string name="setting_start_permission_essential">Essential</string>
+    <string name="setting_start_permission_wes_title">Write External Storage</string>
+    <string name="setting_start_permission_wes_message">To save your data\nSelect Image from Gallery</string>
+    <string name="setting_start_permission_mol_title">Manage Overlay</string>
+    <string name="setting_start_permission_mol_message">To use Floating View\nYou can allow later</string>
+    <string name="setting_start_permission_mol_toast">please allow to use feature!</string>
+    <string name="setting_start_permission_block">Grant Essential Permissions!</string>
+    <string name="setting_start_permission_block_nonessential">Oh no..</string>
+    <string name="setting_start_pass">Click \'Next\' Button :)</string>
+
+    <string name="main_header_date">D-DAY&#160;</string>
+    <string name="main_tab_title_0">Setting</string>
+    <string name="main_tab_title_1">Notification</string>
+    <string name="main_tab_title_2">FloatView</string>
+    <string name="main_tab_title_3">LockScreen</string>
+
+    <string name="main_general_set">Touch to Set Again :)</string>
+    <string name="main_general_mode">MODE</string>
+    <string name="main_general_date">D-DAY</string>
+    <string name="main_general_dayleft">DAYS LEFT</string>
+    <string name="main_general_dayleft_prefix">D&#160;-&#160;</string>
+    <string name="main_general_goal">GOAL</string>
+    <string name="main_general_slogan">UNIVERSITY SLOGAN</string>
+    <string name="main_general_color">UNIVERSITY COLOR</string>
+    <string name="main_general_optional">RESOLUTION</string>
+    <string name="main_general_image">LOGO</string>
+    <string name="main_general_section_misc">Setting</string>
+    <string name="main_general_widget_color_on">Widget Text is WHITE</string>
+    <string name="main_general_widget_color_off">Widget Text is BLACK</string>
+    <string name="main_general_footer_dev">LimeCake</string>
+    <string name="main_general_footer_license">License</string>
+
+    <string name="main_notification_master_on">Notification is ON!</string>
+    <string name="main_notification_master_off">Notification is OFF</string>
+    <string name="main_notification_section_design">Design</string>
+    <string name="main_notification_design_classic">CLASSIC</string>
+    <string name="main_notification_design_new">NEW</string>
+    <string name="main_notification_design_simple">SIMPLE</string>
+    <string name="main_notification_design_color_on">Apply University\'s Colors</string>
+    <string name="main_notification_design_color_off">No University\'s Colors</string>
+    <string name="main_notification_section_setting">More Settings</string>
+    <string name="main_notification_boot_on">Auto starts when booted!</string>
+    <string name="main_notification_boot_off">Not starts when booted</string>
+    <string name="main_notification_word_on">Use Random \'Wise Saying\'</string>
+    <string name="main_notification_word_off">No Random \'Wise Saying\'</string>
+
+    <string name="main_floating_master_on">FloatingView is ON!</string>
+    <string name="main_floating_master_off">FloatingView is OFF</string>
+    <string name="main_floating_master_design">Select design more than one!</string>
+    <string name="main_floating_section_mode">Float Mode</string>
+    <string name="main_floating_mode_move">MOVING MODE</string>
+    <string name="main_floating_mode_fixed">FIXED MODE</string>
+    <string name="main_floating_mode_move_description">In MOVING mode, floating view get your touch event, and can move to any location.</string>
+    <string name="main_floating_mode_fixed_description">In FIXED mode, floating view does not get touch event, suitable in normal using.</string>
+    <string name="main_floating_section_design">Design</string>
+    <string name="main_floating_design_box">BOX</string>
+    <string name="main_floating_design_image">IMAGE</string>
+    <string name="main_floating_design_text">TEXT</string>
+    <string name="main_floating_design_minimal">MINIMAL</string>
+    <string name="main_floating_design_color_on">Apply University\'s Colors</string>
+    <string name="main_floating_design_color_off">No University\'s Colors</string>
+    <string name="main_floating_section_size">Size</string>
+    <string name="main_floating_size">Modify Size</string>
+    <string name="main_floating_section_setting">More Settings</string>
+    <string name="main_floating_boot_on">Auto starts when booted!</string>
+    <string name="main_floating_boot_off">Not starts when booted</string>
+
+    <string name="main_lockscreen_foreground">For Android OREO(8.0) and Up\nIt starts Notification to Work!</string>
+    <string name="main_lockscreen_master_on">LockScreen is ON!</string>
+    <string name="main_lockscreen_master_off">LockScreen is OFF!</string>
+    <string name="main_lockscreen_master_description">We tried to replace lock screen to ours, but if your original lock screen is remaining, please go device\'s \'Options\' and set lock screen to none :)</string>
+    <string name="main_lockscreen_section_mode">UnLock Mode</string>
+    <string name="main_lockscreen_mode_swipe">Swipe</string>
+    <string name="main_lockscreen_mode_pin">Pin</string>
+    <string name="main_lockscreen_mode_pattern">Pattern</string>
+    <string name="main_lockscreen_section_fingerprint">FingerPrint</string>
+    <string name="main_lockscreen_fingerprint_on">Unlock also using FingerPrint!</string>
+    <string name="main_lockscreen_fingerprint_off">Not using FingerPrint</string>
+    <string name="main_lockscreen_fingerprint_description">You must select PIN or PATTERN as main unlock mode</string>
+    <string name="main_lockscreen_fingerprint_notenroll">Please enroll your Fingerprint and come back!</string>
+    <string name="main_lockscreen_section_design">Design</string>
+    <string name="main_lockscreen_design_full">Full</string>
+    <string name="main_lockscreen_design_light">Light</string>
+    <string name="main_lockscreen_design_minimal">Minimal</string>
+    <string name="main_lockscreen_design_color_on">Apply University\'s Colors</string>
+    <string name="main_lockscreen_design_color_off">No University\'s Colors</string>
+    <string name="main_lockscreen_design_wallpaper_on">Using Dark Background</string>
+    <string name="main_lockscreen_design_wallpaper_off">Using Light Background</string>
+    <string name="main_lockscreen_section_setting">More Settings</string>
+    <string name="main_lockscreen_boot_on">Auto starts when booted!</string>
+    <string name="main_lockscreen_boot_off">Not starts when booted</string>
+    <string name="main_lockscreen_boot_warning">Uuh? Really? Then, After booting, Lock screen service starts \'when you starts this app\', until phone power ends.</string>
+    <string name="main_lockscreen_set_pin_input">Set your pin</string>
+    <string name="main_lockscreen_set_pin_confirm">Again for confirmation :)</string>
+    <string name="main_lockscreen_set_pin_wrong">It doesn\'t match. Set again</string>
+    <string name="main_lockscreen_set_pattern_input">Set your pattern</string>
+    <string name="main_lockscreen_set_pattern_confirm">Again for confirmation :)</string>
+    <string name="main_lockscreen_set_pattern_wrong">It doesn\'t match. Set again</string>
+
+    <string name="lockscreen_status_retry_finger">FingerPrint Invalid</string>
+    <string name="lockscreen_status_retry_pin">PIN Incorrect</string>
+    <string name="lockscreen_status_retry_pattern">Pattern Incorrect</string>
+    <string name="lockscreen_status_finger">FingerPrint Activated</string>
+    <string name="lockscreen_swipe_text">Slide to UNLOCK</string>
+
+    <string name="widget_label">SAT Counter Widget</string>
+    <string name="widget_label_box">SAT Box Widget</string>
+    <string name="widget_label_image">SAT Image Widget</string>
+    <string name="widget_label_text">SAT Text Widget</string>
+    <string name="widget_label_minimal">SAT Minimal Widget</string>
+
+    <string name="support_title">Questions?</string>
+    <string name="support_message">If you have any problem/questions, Don\'t be shy of sending mail to me!!</string>
+    <string name="support_mail">Send e-mail</string>
+    <string name="support_close">No,Thanks</string>
+
+    <string name="premium_title">Thank You!</string>
+    <string name="premium_message">Are you enjoying this appliation?\nPlease Rate us if you\'re satisfied with :)\n\nOh, or, you can buy me an Americano!\nIf you give me a donation, I promise your ADs all be gone!</string>
+    <string name="premium_americano">Support an Americano (1$)</string>
+    <string name="premium_rate">Rating? Easy for me :)</string>
+    <string name="premium_close">No,Thanks.</string>
+
+    <string name="release_event_title">New Event</string>
+    <string name="release_event_message">If you post about this application in SNS, \'Life-Time AD Free\' is yours!\n[essentials]\n Send e-mail with your post link\n Post should be everyone-readable, cuz I have to check :)\n Your post should must link to download this market!</string>
+    <string name="release_event_copy">Copy market link</string>
+    <string name="release_event_mail">Send e-mail</string>
+    <string name="release_event_close">No,Thanks.</string>
+    <string name="release_event_copy_ok">Copied!</string>
+
+    <string name="service_error">Sorry, SAT Counter cannot make New Window</string>
+
+    <string-array name="word_list">
+        <item>Knowledge is power</item>
+        <item>No pain no gain.</item>
+        <item>An early bird catch the worm.</item>
+        <item>There is no royal road to Rome.</item>
+        <item>Slow and steady win the race.</item>
+        <item>Heaven helps those who help themselves.</item>
+        <item>Plenty of preparations lead to good results.</item>
+        <item>Idleness is an enemy to success.</item>
+        <item>Diligence guarantees success.</item>
+        <item>Our patience will achieve more than our force.</item>
+        <item>My success depends on my efforts.</item>
+        <item>Patience is bitter, but its fruit is sweet.</item>
+        <item>You cannot succeed if you are afraid of failure.</item>
+        <item>Every failure is a stepping stone to success.</item>
+        <item>Too early to stop.</item>
+        <item>After black clouds, clear weather.</item>
+        <item>The future is gained from present pains.</item>
+        <item>Today which I spent vainly is yesterday which the dead longed.</item>
+        <item>Sleep makes a dream, but study makes dream come true.</item>
+        <item>Time goes now.</item>
+        <item>Even on this moment your enemies are turning their pages.</item>
+        <item>If you do not walk today, you have to run tomorrow.</item>
+        <item>A bad workman always blames his tools.</item>
+        <item>Non but a wise man can employ leisure well.</item>
+        <item>We aim above the mark to hit the mark.</item>
+        <item>All our dreams can come true if we have the courage to pursue them.</item>
+        <item>None but the smart deserve the fair.</item>
+        <item>Time and tide wait for no man.</item>
+        <item>The chief thing is not learning, but the deed.</item>
+        <item>Easier said than done.</item>
+        <item>The rules of success won\'t work unless you do.</item>
+        <item>The world belongs to the energetic.</item>
+        <item>Nothing great was ever achieved without enthusiasm.</item>
+        <item>It is better to were out than to rust out.</item>
+        <item>Failing over and over again is why I succeed.</item>
+        <item>Man is his own worst enemy.</item>
+        <item>A little learning is a dangerous thing.</item>
+        <item>Only the educated are free.</item>
+        <item>Only in water can you learn to swim.</item>
+        <item>Asking costs nothing.</item>
+        <item>All men who have achieved great things have been great dreamers.</item>
+        <item>Knowledge in youth is wisdom in age.</item>
+        <item>Pain past is pleasure.</item>
+        <item>A full belly is the mother of all evil.</item>
+        <item>The earliest time is when you think it is late.</item>
+        <item>Never too old to learn.</item>
+        <item>The beginning is half of the whole.</item>
+        <item>The first step is always the hardest.</item>
+        <item>Better late then never.</item>
+        <item>If the wind will not serve, take to the oars.</item>
+        <item>One\'s utmost moves the heavens.</item>
+        <item>People do best, God do rest.</item>
+        <item>Constant dripping wears away the stone.</item>
+        <item>I\'ll never give over dreaming about the future.</item>
+        <item>The greatest thing happens when the others asleep.</item>
+        <item>Today\'s spittle will be tomorrow\'s tear.</item>
+
+    </string-array>
+</resources>
