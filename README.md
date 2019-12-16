@@ -1,5 +1,7 @@
 # SATCounter
 
+[GOOGLE PLAY LINK](https://play.google.com/store/apps/details?id=com.pyguys.ecounter)
+
 여태까지 없었던 참신한,새로운 수능 디데이 카운터!
 
 남은 디데이만 표시해주는 어플? 아니요,절대로!!
