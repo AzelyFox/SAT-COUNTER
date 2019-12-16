@@ -67,7 +67,10 @@ import java.util.Locale;
 
 import cn.iwgang.countdownview.CountdownView;
 import devlight.io.library.ntb.NavigationTabBar;
+import kr.devx.reviewer.Review;
+import kr.devx.reviewer.Reviewer;
 import kr.devx.satcounter.Util.DayUtil;
+import kr.devx.satcounter.Util.ReviewDialog;
 import kr.devx.satcounter.Util.SmartFragmentStatePagerAdapter;
 import kr.devx.satcounter.Util.UserSetting;
 
@@ -131,6 +134,8 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         }
 
         checkEventAvailable();
+
+        showReviewDialog(3);
     }
 
     private void applyPremium() {
@@ -415,6 +420,23 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
             }
         });
         baseSettingDialog.show();
+    }
+
+    private void showReviewDialog(int numberOfAccess) {
+        ReviewDialog reviewDialog = new ReviewDialog(MainActivity.this, null);
+        reviewDialog.setRateText("Would you rate me?")
+                .setTitle("")
+                .setForceMode(true)
+                .setUpperBound(4)
+                .setNegativeReviewListener(new ReviewDialog.NegativeReviewListener() {
+                    @Override
+                    public void onNegativeReview(int rating, String email, String message) {
+                        Review review = new Review.Builder(SATApplication.getUserInfo(), rating).tag("SAT").title(email).content(message).build();
+                        Reviewer.newReview("OC4HJMB39F42", review);
+                        Toast.makeText(MainActivity.this, "Thank You!", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .showAfter(numberOfAccess);
     }
 
     public static class MyPagerAdapter extends SmartFragmentStatePagerAdapter {

@@ -40,6 +40,7 @@ import com.andrognito.pinlockview.PinLockListener;
 import com.andrognito.pinlockview.PinLockView;
 import com.ncorti.slidetoact.SlideToActView;
 
+import kr.devx.catcher.Catcher;
 import org.jetbrains.annotations.NotNull;
 
 import kr.devx.satcounter.Util.DayUtil;
@@ -103,6 +104,8 @@ public class BackgroundService extends Service {
                             }
                         } catch (Exception e) {
                             e.printStackTrace();
+                            kr.devx.catcher.Log log = new kr.devx.catcher.Log.Builder(SATApplication.getUserInfo(), 3).tag("SAT").title(e.getMessage()).content(Log.getStackTraceString(e)).build();
+                            Catcher.newLog("FC95J37G0IF2", log);
                         }
                     }
                 }
@@ -158,6 +161,8 @@ public class BackgroundService extends Service {
             if (appPreferences != null) if (NOTIFICATION_MASTER == 0 && FLOATING_MASTER == 0 && LOCKSCREEN_MASTER == 0) stopSelf();
         } catch (Exception e) {
             e.printStackTrace();
+            kr.devx.catcher.Log log = new kr.devx.catcher.Log.Builder(SATApplication.getUserInfo(), 2).tag("SAT").title(e.getMessage()).content(Log.getStackTraceString(e)).build();
+            Catcher.newLog("FC95J37G0IF2", log);
         }
         if (LOCKSCREEN_MASTER == 1 && intent != null && intent.hasExtra("ACTION")) {
             if (intent.getStringExtra("ACTION").equals(Intent.ACTION_SCREEN_ON)) {
@@ -416,6 +421,8 @@ public class BackgroundService extends Service {
                                 fingerPrint.cancelAuthentication();
                         } catch (Exception e) {
                             e.printStackTrace();
+                            kr.devx.catcher.Log log = new kr.devx.catcher.Log.Builder(SATApplication.getUserInfo(), 4).tag("SAT").title(e.getMessage()).content(Log.getStackTraceString(e)).build();
+                            Catcher.newLog("FC95J37G0IF2", log);
                         }
                     }
                 });
@@ -439,6 +446,8 @@ public class BackgroundService extends Service {
                                     fingerPrint.cancelAuthentication();
                             } catch (Exception e) {
                                 e.printStackTrace();
+                                kr.devx.catcher.Log log = new kr.devx.catcher.Log.Builder(SATApplication.getUserInfo(), 4).tag("SAT").title(e.getMessage()).content(Log.getStackTraceString(e)).build();
+                                Catcher.newLog("FC95J37G0IF2", log);
                             }
                         }
                         else {
@@ -481,6 +490,8 @@ public class BackgroundService extends Service {
                                     fingerPrint.cancelAuthentication();
                             } catch (Exception e) {
                                 e.printStackTrace();
+                                kr.devx.catcher.Log log = new kr.devx.catcher.Log.Builder(SATApplication.getUserInfo(), 4).tag("SAT").title(e.getMessage()).content(Log.getStackTraceString(e)).build();
+                                Catcher.newLog("FC95J37G0IF2", log);
                             }
                         }
                         else {
@@ -512,6 +523,8 @@ public class BackgroundService extends Service {
             Toast.makeText(this, getString(R.string.service_error), Toast.LENGTH_SHORT).show();
             Toast.makeText(this, e + e.getMessage(), Toast.LENGTH_SHORT).show();
             e.printStackTrace();
+            kr.devx.catcher.Log log = new kr.devx.catcher.Log.Builder(SATApplication.getUserInfo(), 4).tag("SAT").title(e.getMessage()).content(Log.getStackTraceString(e)).build();
+            Catcher.newLog("FC95J37G0IF2", log);
         }
     }
 
@@ -744,6 +757,8 @@ public class BackgroundService extends Service {
             Toast.makeText(this, getString(R.string.service_error), Toast.LENGTH_SHORT).show();
             Toast.makeText(this, e + e.getMessage(), Toast.LENGTH_SHORT).show();
             e.printStackTrace();
+            kr.devx.catcher.Log log = new kr.devx.catcher.Log.Builder(SATApplication.getUserInfo(), 4).tag("SAT").title(e.getMessage()).content(Log.getStackTraceString(e)).build();
+            Catcher.newLog("FC95J37G0IF2", log);
         }
     }
 

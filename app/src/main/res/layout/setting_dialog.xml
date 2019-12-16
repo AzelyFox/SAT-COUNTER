@@ -171,20 +171,6 @@
                 android:visibility="gone"
                 android:orientation="vertical">
                 <TextView
-                    android:id="@+id/setting_datePresetSuneung2020"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:padding="8dp"
-                    android:background="@drawable/button_thinstyle"
-                    android:gravity="center"
-                    android:textColor="@color/colorBlack"
-                    android:text="@string/setting_date_preset_suneung_2020"
-                    app:autoSizeTextType="uniform"
-                    app:autoSizeMinTextSize="14sp"
-                    app:autoSizeMaxTextSize="16sp"
-                    app:autoSizeStepGranularity="2sp"/>
-                <TextView
                     android:id="@+id/setting_datePresetSuneung2021"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

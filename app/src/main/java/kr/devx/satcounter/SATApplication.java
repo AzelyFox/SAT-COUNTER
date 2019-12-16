@@ -1,6 +1,7 @@
 package kr.devx.satcounter;
 
 import android.app.Application;
+import android.os.Build;
 import android.util.Log;
 
 import com.google.android.gms.ads.MobileAds;
@@ -238,6 +239,30 @@ public class SATApplication extends Application {
     public String randomFromWordList() {
         Random generator = new Random();
         return WordList.get(generator.nextInt(WordList.size() - 1));
+    }
+
+    public static String getUserInfo() {
+        String version = String.valueOf(Build.VERSION.SDK_INT);
+        String manufacturer = Build.MANUFACTURER;
+        String model = Build.MODEL;
+        if (model.startsWith(manufacturer)) {
+            return version + " " + capitalize(model);
+        } else {
+            return version + " " + capitalize(manufacturer) + " " + model;
+        }
+    }
+
+
+    private static String capitalize(String s) {
+        if (s == null || s.length() == 0) {
+            return "";
+        }
+        char first = s.charAt(0);
+        if (Character.isUpperCase(first)) {
+            return s;
+        } else {
+            return Character.toUpperCase(first) + s.substring(1);
+        }
     }
 
 }

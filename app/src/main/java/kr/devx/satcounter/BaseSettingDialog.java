@@ -59,9 +59,6 @@ public class BaseSettingDialog extends AppCompatDialog {
     private BaseSettingListener resultListener;
     private boolean skipIfPermissionGranted = false;
 
-    private final static int SUNEUNG_2020_YEAR = 2019;
-    private final static int SUNEUNG_2020_MONTH = 11;
-    private final static int SUNEUNG_2020_DAY = 14;
     private final static int SUNEUNG_2021_YEAR = 2020;
     private final static int SUNEUNG_2021_MONTH = 11;
     private final static int SUNEUNG_2021_DAY = 19;
@@ -71,6 +68,7 @@ public class BaseSettingDialog extends AppCompatDialog {
     private final static int SUNEUNG_2023_YEAR = 2022;
     private final static int SUNEUNG_2023_MONTH = 11;
     private final static int SUNEUNG_2023_DAY = 17;
+
 
     private enum SETTING_STEP {
         STEP_START, STEP_MODE, STEP_DATE, STEP_GOAL, STEP_FINISH;
@@ -96,7 +94,7 @@ public class BaseSettingDialog extends AppCompatDialog {
 
     private LinearLayout settingDateView, settingPresetSuneung;
     private TextView settingDateShow, settingPreset;
-    private TextView settingPresetSuneung2020, settingPresetSuneung2021, settingPresetSuneung2022, settingPresetSuneung2023;
+    private TextView settingPresetSuneung2021, settingPresetSuneung2022, settingPresetSuneung2023;
     final Calendar settingDateCalendar = Calendar.getInstance();
 
     private LinearLayout settingGoalView, settingGoalUniversityView;
@@ -154,7 +152,6 @@ public class BaseSettingDialog extends AppCompatDialog {
         settingPresetSuneung = findViewById(R.id.setting_datePresetSuneungView);
         settingDateShow = findViewById(R.id.setting_dateShow);
         settingPreset = findViewById(R.id.setting_datePreset);
-        settingPresetSuneung2020 = findViewById(R.id.setting_datePresetSuneung2020);
         settingPresetSuneung2021 = findViewById(R.id.setting_datePresetSuneung2021);
         settingPresetSuneung2022 = findViewById(R.id.setting_datePresetSuneung2022);
         settingPresetSuneung2023 = findViewById(R.id.setting_datePresetSuneung2023);
@@ -450,8 +447,6 @@ public class BaseSettingDialog extends AppCompatDialog {
                 newSetting.setUserDate(settingDateCalendar.getTime());
                 SimpleDateFormat settingDateFormat = new SimpleDateFormat(DATE_FORMAT, Locale.getDefault());
                 settingDateShow.setText(settingDateFormat.format(settingDateCalendar.getTime()));
-                settingPresetSuneung2020.setSelected(false);
-                settingPresetSuneung2020.setTextColor(ContextCompat.getColor(context, R.color.colorBlack));
                 settingPresetSuneung2021.setSelected(false);
                 settingPresetSuneung2021.setTextColor(ContextCompat.getColor(context, R.color.colorBlack));
                 settingPresetSuneung2022.setSelected(false);
@@ -470,39 +465,10 @@ public class BaseSettingDialog extends AppCompatDialog {
                 dateDialog.show();
             }
         });
-        settingPresetSuneung2020.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (currentStep != SETTING_STEP.STEP_DATE) return;
-                settingPresetSuneung2021.setSelected(false);
-                settingPresetSuneung2021.setTextColor(ContextCompat.getColor(context, R.color.colorBlack));
-                settingPresetSuneung2022.setSelected(false);
-                settingPresetSuneung2022.setTextColor(ContextCompat.getColor(context, R.color.colorBlack));
-                settingPresetSuneung2023.setSelected(false);
-                settingPresetSuneung2023.setTextColor(ContextCompat.getColor(context, R.color.colorBlack));
-                if (!settingPresetSuneung2020.isSelected()) {
-                    settingDateCalendar.set(Calendar.YEAR, SUNEUNG_2020_YEAR);
-                    settingDateCalendar.set(Calendar.MONTH, SUNEUNG_2020_MONTH - 1);
-                    settingDateCalendar.set(Calendar.DAY_OF_MONTH, SUNEUNG_2020_DAY);
-                    newSetting.setUserDate(settingDateCalendar.getTime());
-                    SimpleDateFormat settingDateFormat = new SimpleDateFormat(DATE_FORMAT, Locale.getDefault());
-                    settingDateShow.setText(settingDateFormat.format(settingDateCalendar.getTime()));
-                    settingPresetSuneung2020.setSelected(true);
-                    settingPresetSuneung2020.setTextColor(ContextCompat.getColor(context, R.color.colorWhite));
-                    settingBottomNext.setVisibility(View.VISIBLE);
-                } else {
-                    settingPresetSuneung2020.setSelected(false);
-                    settingPresetSuneung2020.setTextColor(ContextCompat.getColor(context, R.color.colorBlack));
-                    settingBottomNext.setVisibility(View.INVISIBLE);
-                }
-            }
-        });
         settingPresetSuneung2021.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (currentStep != SETTING_STEP.STEP_DATE) return;
-                settingPresetSuneung2020.setSelected(false);
-                settingPresetSuneung2020.setTextColor(ContextCompat.getColor(context, R.color.colorBlack));
                 settingPresetSuneung2022.setSelected(false);
                 settingPresetSuneung2022.setTextColor(ContextCompat.getColor(context, R.color.colorBlack));
                 settingPresetSuneung2023.setSelected(false);
@@ -528,8 +494,6 @@ public class BaseSettingDialog extends AppCompatDialog {
             @Override
             public void onClick(View v) {
                 if (currentStep != SETTING_STEP.STEP_DATE) return;
-                settingPresetSuneung2020.setSelected(false);
-                settingPresetSuneung2020.setTextColor(ContextCompat.getColor(context, R.color.colorBlack));
                 settingPresetSuneung2021.setSelected(false);
                 settingPresetSuneung2021.setTextColor(ContextCompat.getColor(context, R.color.colorBlack));
                 settingPresetSuneung2023.setSelected(false);
@@ -555,8 +519,6 @@ public class BaseSettingDialog extends AppCompatDialog {
             @Override
             public void onClick(View v) {
                 if (currentStep != SETTING_STEP.STEP_DATE) return;
-                settingPresetSuneung2020.setSelected(false);
-                settingPresetSuneung2020.setTextColor(ContextCompat.getColor(context, R.color.colorBlack));
                 settingPresetSuneung2021.setSelected(false);
                 settingPresetSuneung2021.setTextColor(ContextCompat.getColor(context, R.color.colorBlack));
                 settingPresetSuneung2022.setSelected(false);
