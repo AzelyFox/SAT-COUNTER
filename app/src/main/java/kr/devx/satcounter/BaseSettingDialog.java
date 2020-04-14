@@ -60,8 +60,8 @@ public class BaseSettingDialog extends AppCompatDialog {
     private boolean skipIfPermissionGranted = false;
 
     private final static int SUNEUNG_2021_YEAR = 2020;
-    private final static int SUNEUNG_2021_MONTH = 11;
-    private final static int SUNEUNG_2021_DAY = 19;
+    private final static int SUNEUNG_2021_MONTH = 12;
+    private final static int SUNEUNG_2021_DAY = 3;
     private final static int SUNEUNG_2022_YEAR = 2021;
     private final static int SUNEUNG_2022_MONTH = 11;
     private final static int SUNEUNG_2022_DAY = 18;

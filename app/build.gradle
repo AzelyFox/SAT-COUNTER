@@ -7,8 +7,8 @@ android {
         applicationId "kr.devx.satcounter"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 45
-        versionName "1.2.1NV"
+        versionCode 46
+        versionName "1.2.2NV"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

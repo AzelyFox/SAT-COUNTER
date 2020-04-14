@@ -41,7 +41,6 @@ import com.andrognito.pinlockview.PinLockView;
 import com.ncorti.slidetoact.SlideToActView;
 
 import kr.devx.catcher.Catcher;
-import org.jetbrains.annotations.NotNull;
 
 import kr.devx.satcounter.Util.DayUtil;
 import kr.devx.satcounter.Util.FingerPrint;
@@ -414,7 +413,7 @@ public class BackgroundService extends Service {
                 lockPatternView.setVisibility(View.GONE);
                 lockSwipeModule.setOnSlideCompleteListener(new SlideToActView.OnSlideCompleteListener() {
                     @Override
-                    public void onSlideComplete(@NotNull SlideToActView slideToActView) {
+                    public void onSlideComplete(SlideToActView slideToActView) {
                         try {
                             windowManager.removeView(lockView);
                             if (Build.VERSION.SDK_INT >= 23 && fingerPrint != null)
