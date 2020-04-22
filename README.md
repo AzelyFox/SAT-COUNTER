@@ -2,6 +2,8 @@
 
 [GOOGLE PLAY LINK](https://play.google.com/store/apps/details?id=com.pyguys.ecounter)
 
+## Explanation
+
 여태까지 없었던 참신한,새로운 수능 디데이 카운터!
 
 남은 디데이만 표시해주는 어플? 아니요,절대로!!
@@ -17,7 +19,15 @@
 
 수능 카운터에만 존재하는 신기하고 특별한 기능들로 중무장 하였습니다.
 
-본 애플리케이션은 다음 기능들을 제공합니다.
+## Screenshots
+
+<div>
+<img src="https://user-images.githubusercontent.com/8467374/79940349-73c0c800-849c-11ea-98ad-803d50c310bd.png" width="30%"></img>
+<img src="https://user-images.githubusercontent.com/8467374/79940352-74f1f500-849c-11ea-9a7a-6839fa3b0958.png" width="30%"></img>
+<img src="https://user-images.githubusercontent.com/8467374/79940353-758a8b80-849c-11ea-9180-6052bfa449f9.png" width="30%"></img>
+</div>
+
+## Features
 
 1. 수능 D-Day  
 수능까지 남은 일수를 상단 알림바와 애플리케이션을 통해 알려 드립니다.
@@ -35,5 +45,3 @@
 
 5. 위젯을 통한 다짐,대학,명언 확인기능  
 자신이 설정한 모든 것을 위젯으로 편하게 배치시키는 기능도 존재합니다.
-
-수능타이머,수능알림이,수능디데이. 모든 기능을 포함하면서도 정말 특이하고 편리한 기능을 가진 수능 카운터!
