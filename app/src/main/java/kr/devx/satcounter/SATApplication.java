@@ -4,8 +4,6 @@ import android.app.Application;
 import android.os.Build;
 import android.util.Log;
 
-import com.google.android.gms.ads.MobileAds;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -47,8 +45,6 @@ public class SATApplication extends Application {
         FontUtil.setDefaultFont(this, "SERIF", "NanumGothic.otf");
         FontUtil.setDefaultFont(this, "MONOSPACE", "NanumGothic.otf");
         FontUtil.setDefaultFont(this, "SANS_SERIF", "NanumGothic.otf");
-
-        MobileAds.initialize(this, "ca-app-pub-8781765548929244~4477266444");
 
         initializeKoreaUniv();
         initializeUsUniv();

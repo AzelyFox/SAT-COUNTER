@@ -43,17 +43,6 @@
                     android:text="@string/support_title"
                     android:textSize="16sp"
                     android:textColor="@color/colorAccent" />
-                <TextView
-                    android:id="@+id/main_generalPremium"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="4dp"
-                    android:gravity="center"
-                    android:background="@drawable/button_thinstyle"
-                    android:text="@string/premium_title"
-                    android:textSize="16sp"
-                    android:textColor="@color/colorAccent" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -70,22 +59,6 @@
                     android:text="@string/main_general_set"
                     android:textSize="18sp"
                     android:textColor="@color/colorAccent"/>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/main_generalAdView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:visibility="visible"
-                android:orientation="vertical">
-                <com.google.android.gms.ads.AdView
-                    xmlns:ads="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/main_generalPostAd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    ads:adSize="MEDIUM_RECTANGLE"
-                    ads:adUnitId="ca-app-pub-8781765548929244/7813752514"/>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/main_generalView"

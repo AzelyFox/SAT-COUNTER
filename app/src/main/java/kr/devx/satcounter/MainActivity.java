@@ -37,17 +37,12 @@ import com.andrognito.patternlockview.utils.PatternLockUtils;
 import com.andrognito.pinlockview.IndicatorDots;
 import com.andrognito.pinlockview.PinLockListener;
 import com.andrognito.pinlockview.PinLockView;
-import com.anjlab.android.iab.v3.BillingProcessor;
-import com.anjlab.android.iab.v3.TransactionDetails;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
 import com.yarolegovich.lovelydialog.LovelyChoiceDialog;
 import com.yarolegovich.lovelydialog.LovelyStandardDialog;
 
@@ -77,7 +72,7 @@ import kr.devx.satcounter.Util.UserSetting;
 import static kr.devx.satcounter.SATApplication.debugLog;
 import static kr.devx.satcounter.Util.UserSetting.DATE_FORMAT;
 
-public class MainActivity extends AppCompatActivity implements BillingProcessor.IBillingHandler {
+public class MainActivity extends AppCompatActivity {
 
     private SATApplication satApplication;
     private SharedPreferences appPreferences;
@@ -107,10 +102,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     private floatingviewFragment floatingviewFragmentInstance;
     private lockscreenFragment lockscreenFragmentInstance;
 
-    private BillingProcessor billProcessor;
-    private LinearLayout bannerAdHolder, postAdHolder;
-    private InterstitialAd screenAdView;
-    private boolean IS_PREMIUM_USER = false;
+    private boolean IS_PREMIUM_USER = true;
 
     @Override
     public void onCreate(Bundle onSavedInstance) {
@@ -121,11 +113,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         appPreferences = getSharedPreferences("SETTING", MODE_PRIVATE);
         SETTING_EXIST = appPreferences.getBoolean("SETTING_FINISHED",false);
 
-        billProcessor = new BillingProcessor(this, "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAj8qKbfOB9sk9CgKgd6WGdpocGN7m9AT8Q7jrQ4TsH/R3vfG6WgxIZeGOAdeNSn1887Mj6s8AmlTU4a1ipnCdoYbZOy2tEv0z/skuZEdJWSawBaRQYexQuiB8QkcJrd8LzRhgihP/l9/XvzYIrpXqChz0rDYKEn6ZvbfislZUCmGTmNkNWXilIALiodQOweWE5lqyDScBgjfmONbu7Qc2xOdZ4oJKjdeexysRHloSLixbHeoz1rvjP46BoAxAMW6oKVzqsOzYl/DcKo+w0NZCmT0WyhqdI5wGrB/MwFiBa1Pm/LlNPRD5shu97An+tXvnHURQj7cqgZ4u0IG6uMoeeQIDAQAB", this);
-        billProcessor.initialize();
-        screenAdView = new InterstitialAd(this);
-        screenAdView.setAdUnitId("ca-app-pub-8781765548929244/3032199121");
-
         initializeId();
         initializeData();
 
@@ -133,19 +120,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
             makeUserSetting(false);
         }
 
-        checkEventAvailable();
-
         showReviewDialog(3);
-    }
-
-    private void applyPremium() {
-        IS_PREMIUM_USER = true;
-        bannerAdHolder.setVisibility(View.GONE);
-        if (generalFragmentInstance != null) generalFragmentInstance.onUserPremium();
-    }
-
-    public void onUserPremiumRequest() {
-        billProcessor .purchase(this, "donation_coffee");
     }
 
     private void initializeId() {
@@ -162,7 +137,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         lockscreenSetPatternView = findViewById(R.id.main_lockscreenPatternSetView);
         lockscreenSetPatternText = findViewById(R.id.main_lockscreenPatternSetText);
         lockscreenSetPatternModule = findViewById(R.id.main_lockscreenPatternSetModule);
-        bannerAdHolder = findViewById(R.id.main_footerView);
 
         mainViewAdapter = new MyPagerAdapter(getSupportFragmentManager());
         mainViewPager.setAdapter(mainViewAdapter);
@@ -230,7 +204,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     public void onGeneralFragmentReady(generalFragment instance) {
         generalFragmentInstance = instance;
-        if (generalFragmentInstance != null && IS_PREMIUM_USER) generalFragmentInstance.onUserPremium();
         initializeData();
     }
 
@@ -253,7 +226,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     }
 
     public void setLockPin() {
-        if (!IS_PREMIUM_USER) screenAdView.loadAd(new AdRequest.Builder().build());
         lockscreenSetPinView.setVisibility(View.VISIBLE);
         lockscreenSetPinText.setText(getString(R.string.main_lockscreen_set_pin_input));
         lockscreenSetPinDots.setPinLength(6);
@@ -279,7 +251,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                         lockscreenSetPinModule.resetPinLockView();
                         PIN_INSERT_STEP = 0;
                         lockscreenSetPinView.setVisibility(View.GONE);
-                        if (!IS_PREMIUM_USER) screenAdView.show();
                         if (lockscreenFragmentInstance != null) lockscreenFragmentInstance.onPinSet();
                     } else {
                         savedPin = "";
@@ -297,7 +268,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     }
 
     public void setLockPattern() {
-        if (!IS_PREMIUM_USER) screenAdView.loadAd(new AdRequest.Builder().build());
         lockscreenSetPatternView.setVisibility(View.VISIBLE);
         lockscreenSetPatternText.setText(getString(R.string.main_lockscreen_set_pattern_input));
         lockscreenSetPatternModule.setAspectRatioEnabled(true);
@@ -331,7 +301,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                         lockscreenSetPatternText.setText(getString(R.string.main_lockscreen_set_pattern_input));
                         PATTERN_INSERT_STEP = 0;
                         lockscreenSetPatternView.setVisibility(View.GONE);
-                        if (!IS_PREMIUM_USER) screenAdView.show();
                         if (lockscreenFragmentInstance != null) lockscreenFragmentInstance.onPatternSet();
                     } else {
                         savedPattern = "-1";
@@ -345,47 +314,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         });
     }
 
-    private void checkEventAvailable() {
-        new GetEventTask().execute();
-    }
-
-    private void onEventAvailable() {
-        mainFloatingActionButton.show();
-        mainFloatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String[] options = {getString(R.string.release_event_copy), getString(R.string.release_event_mail), getString(R.string.release_event_close)};
-                ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_1, android.R.id.text1, options);
-                new LovelyChoiceDialog(MainActivity.this)
-                        .setTopColorRes(R.color.colorWhite)
-                        .setTitle(R.string.release_event_title)
-                        .setIcon(R.drawable.icon_magic)
-                        .setMessage(R.string.release_event_message)
-                        .setItems(adapter, new LovelyChoiceDialog.OnItemSelectedListener<String>() {
-                            @Override
-                            public void onItemSelected(int position, String item) {
-                                switch (position) {
-                                    case 0:
-                                        ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-                                        ClipData clip = ClipData.newPlainText(getString(R.string.app_name), "https://play.google.com/store/apps/details?id=kr.devx.satcounter");
-                                        clipboard.setPrimaryClip(clip);
-                                        Toast.makeText(MainActivity.this, getString(R.string.release_event_copy_ok), Toast.LENGTH_SHORT).show();
-                                        break;
-                                    case 1:
-                                        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto","tiram2sue@naver.com", null));
-                                        emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.app_name));
-                                        startActivity(Intent.createChooser(emailIntent, "Send Email"));
-                                        break;
-                                }
-                            }
-                        })
-                        .show();
-            }
-        });
-    }
-
     public void makeUserSetting(boolean skipPermissionIfGranted) {
-        if (!IS_PREMIUM_USER) screenAdView.loadAd(new AdRequest.Builder().build());
         BaseSettingDialog baseSettingDialog = new BaseSettingDialog(this, R.style.FullDialogTheme, skipPermissionIfGranted, new BaseSettingDialog.BaseSettingListener() {
             @Override
             public void onSettingFinished(UserSetting newSetting) {
@@ -416,7 +345,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                 debugLog(SATApplication.LOG_LEVEL.DEV, "onSettingResult","SAVE FINISH");
                 SETTING_EXIST = true;
                 initializeData();
-                if (!IS_PREMIUM_USER) screenAdView.show();
             }
         });
         baseSettingDialog.show();
@@ -476,19 +404,12 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (!billProcessor.handleActivityResult(requestCode, resultCode, data)) {
-            super.onActivityResult(requestCode, resultCode, data);
-        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        if (billProcessor != null && billProcessor.isInitialized()) {
-            billProcessor.loadOwnedPurchasesFromGoogle();
-            boolean isDonatedCoffee = billProcessor.isPurchased("donation_coffee");
-            if (isDonatedCoffee) applyPremium();
-        }
     }
 
     @Override
@@ -511,90 +432,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     @Override
     public void onDestroy() {
-        if (billProcessor != null) {
-            billProcessor.release();
-        }
         super.onDestroy();
-    }
-
-    @Override
-    public void onBillingInitialized() {
-        SATApplication.debugLog(SATApplication.LOG_LEVEL.CRI, "BILL] onBillingInitialized", "");
-        billProcessor.loadOwnedPurchasesFromGoogle();
-        boolean isDonatedCoffee = billProcessor.isPurchased("donation_coffee");
-        if (isDonatedCoffee) applyPremium();
-    }
-
-    @Override
-    public void onProductPurchased(String productId, TransactionDetails details) {
-        SATApplication.debugLog(SATApplication.LOG_LEVEL.CRI, "BILL] onProductPurchased : ", productId);
-        if (productId.equals("donation_coffee")) {
-            applyPremium();
-        }
-    }
-
-    @Override
-    public void onBillingError(int errorCode, Throwable error) {
-        SATApplication.debugLog(SATApplication.LOG_LEVEL.CRI, "BILL] onBillingError : ", errorCode);
-        for(String sku : billProcessor.listOwnedProducts()) {
-            SATApplication.debugLog(SATApplication.LOG_LEVEL.CRI, "BILL] onPurchaseHistoryRestored : ", sku);
-            if (sku.equals("donation_coffee")) {
-                applyPremium();
-            }
-        }
-    }
-
-    @Override
-    public void onPurchaseHistoryRestored() {
-        for(String sku : billProcessor.listOwnedProducts()) {
-            SATApplication.debugLog(SATApplication.LOG_LEVEL.CRI, "BILL] onPurchaseHistoryRestored : ", sku);
-            if (sku.equals("donation_coffee")) {
-                applyPremium();
-            }
-        }
-    }
-
-    public class GetEventTask extends AsyncTask<String, Void, String> {
-
-        @Override
-        protected String doInBackground(String... params) {
-            HttpURLConnection urlConnection = null;
-            String result = "";
-            try {
-                URL url = new URL(SATApplication.SERVER_EVENT_AVAILABLE);
-                urlConnection = (HttpURLConnection) url.openConnection();
-                int code = urlConnection.getResponseCode();
-                if(code == 200){
-                    InputStream inputStream = new BufferedInputStream(urlConnection.getInputStream());
-                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-                    String line = "";
-                    while ((line = bufferedReader.readLine()) != null)
-                        result += line;
-                    inputStream.close();
-                }
-                return result;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                if (urlConnection != null)
-                    urlConnection.disconnect();
-            }
-            return result;
-
-        }
-
-        @Override
-        protected void onPostExecute(String result) {
-            if (result.equals("ON")) {
-                onEventAvailable();
-            }
-            super.onPostExecute(result);
-        }
-
     }
 
 }

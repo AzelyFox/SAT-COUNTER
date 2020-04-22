@@ -39,7 +39,7 @@ public class generalFragment extends Fragment {
     private int currentPage;
     private SharedPreferences appPreferences;
 
-    private TextView generalSupport, generalPremiun;
+    private TextView generalSupport;
     private TextView generalSet;
     private LinearLayout generalView, generalModeView, generalDateView, generalDayLeftView, generalGoalView, generalSloganView, generalColorView, generalMessageView, generalImageView;
     private TextView generalMode, generalDate, generalDayLeft, generalGoal, generalSlogan, generalColor, generalMessage;
@@ -48,8 +48,6 @@ public class generalFragment extends Fragment {
     private TextView generalWidgetColorText;
     private Switch generalWidgetColorSwitch;
     private TextView generalFooterDev, generalFooterVersion, generalFooterLicense;
-
-    private LinearLayout postAdHolder;
 
     public static generalFragment newInstance(int currentPage) {
         generalFragment fragment = new generalFragment();
@@ -79,14 +77,8 @@ public class generalFragment extends Fragment {
         return rootView;
     }
 
-    public void onUserPremium() {
-        postAdHolder.setVisibility(View.GONE);
-        generalPremiun.setVisibility(View.GONE);
-    }
-
     private void initializeId(View rootView) {
         generalSupport = rootView.findViewById(R.id.main_generalSupport);
-        generalPremiun = rootView.findViewById(R.id.main_generalPremium);
         generalSet = rootView.findViewById(R.id.main_generalSet);
         generalView = rootView.findViewById(R.id.main_generalView);
         generalModeView = rootView.findViewById(R.id.main_generalModeView);
@@ -111,7 +103,6 @@ public class generalFragment extends Fragment {
         generalFooterDev = rootView.findViewById(R.id.main_generalFooterDev);
         generalFooterVersion = rootView.findViewById(R.id.main_generalFooterVersion);
         generalFooterLicense = rootView.findViewById(R.id.main_generalFooterLicense);
-        postAdHolder = rootView.findViewById(R.id.main_generalAdView);
 
         generalSupport.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,36 +122,6 @@ public class generalFragment extends Fragment {
                             }
                         })
                         .setNegativeButton(R.string.support_close, null)
-                        .show();
-            }
-        });
-        generalPremiun.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String[] options = {getString(R.string.premium_rate), getString(R.string.premium_americano)};
-                ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, android.R.id.text1, options);
-                new LovelyChoiceDialog(getContext())
-                        .setTopColorRes(R.color.colorAccent2)
-                        .setTitle(R.string.premium_title)
-                        .setIcon(R.drawable.icon_coffee)
-                        .setMessage(R.string.premium_message)
-                        .setItems(adapter, new LovelyChoiceDialog.OnItemSelectedListener<String>() {
-                            @Override
-                            public void onItemSelected(int position, String item) {
-                                switch (position) {
-                                    case 0:
-                                        try {
-                                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getContext().getPackageName())));
-                                        } catch (android.content.ActivityNotFoundException err) {
-                                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + getContext().getPackageName())));
-                                        }
-                                        break;
-                                    case 1:
-                                        ((MainActivity)getActivity()).onUserPremiumRequest();
-                                        break;
-                                }
-                            }
-                        })
                         .show();
             }
         });

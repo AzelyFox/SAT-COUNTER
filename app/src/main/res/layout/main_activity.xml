@@ -188,17 +188,4 @@
                 app:dotCount="3"/>
         </LinearLayout>
     </RelativeLayout>
-    <LinearLayout
-        android:id="@+id/main_footerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:orientation="vertical">
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/main_footerAdView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            ads:adUnitId="ca-app-pub-8781765548929244/1540111917"
-            ads:adSize="BANNER"/>
-    </LinearLayout>
 </LinearLayout>
