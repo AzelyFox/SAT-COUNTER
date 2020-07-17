@@ -1,6 +1,27 @@
-# SATCounter
+<h1 align="center">
+  <img src="logo.png" alt="SAT Counter" width="240">
+  <br>
+  <p>SAT Counter</p>
+</h1>
 
-[GOOGLE PLAY LINK](https://play.google.com/store/apps/details?id=com.pyguys.ecounter)
+<p align="center">
+    <a href="https://play.google.com/store/apps/details?id=com.pyguys.ecounter">
+        <img src="https://img.shields.io/badge/Google%20Play-수능카운터-green?style=flat-square&logo=google-play" />
+    </a>
+    <a href="#license">
+        <img src="https://img.shields.io/github/license/LIMECAKE/SAT-COUNTER?style=flat-square" />
+    </a>
+    <a href="https://github.com/LIMECAKE/SAT-COUNTER/releases">
+        <img src="https://img.shields.io/github/v/release/LIMECAKE/SAT-COUNTER?style=flat-square" />
+    </a>
+    <a href="https://github.com/LIMECAKE/SAT-COUNTER/issues">
+        <img src="https://img.shields.io/badge/SUPPORT-LIVE-green?style=flat-square" />
+    </a>
+</p>
+
+<p align="center">
+A SAT(Seneung in Korea) counter Android application
+</p>
 
 ## Explanation
 
@@ -45,3 +66,6 @@
 
 5. 위젯을 통한 다짐,대학,명언 확인기능  
 자신이 설정한 모든 것을 위젯으로 편하게 배치시키는 기능도 존재합니다.
+
+## License
+[Apache](LICENSE) © 2020 LimeCake <limecake23@gmail.com>
